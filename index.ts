@@ -1,6 +1,6 @@
 import RCTSplashScreen from './src/NativeSplashScreen'
 
-const SplashScreen = {
+export const SplashScreen = {
   hide() {
     return RCTSplashScreen.hide()
   }

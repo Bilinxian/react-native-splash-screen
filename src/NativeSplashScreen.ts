@@ -5,6 +5,6 @@ export interface Spec extends TurboModule {
   hide(): Promise<void>;
 }
 
-export default TurboModuleRegistry.get<Spec>(
+export default TurboModuleRegistry.getEnforcing<Spec>(
   'RCTSplashScreen',
 ) as Spec | null;
