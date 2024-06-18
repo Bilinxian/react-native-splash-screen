@@ -78,11 +78,8 @@ public class SplashScreen {
             @Override
             public void run() {
                 if (mSplashDialog != null && mSplashDialog.isShowing()) {
-                    boolean isDestroyed = false;
 
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                        isDestroyed = _activity.isDestroyed();
-                    }
+                    boolean isDestroyed = _activity.isDestroyed();
 
                     if (!_activity.isFinishing() && !isDestroyed) {
                         mSplashDialog.dismiss();
