@@ -3,7 +3,7 @@ package org.devio.rn.splashscreen;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.facebook.react.TurboReactPackage;
+import com.facebook.react.BaseReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.module.model.ReactModuleInfo;
@@ -20,7 +20,7 @@ import java.util.Map;
  * GitHub:https://github.com/crazycodeboy
  * Email:crazycodeboy@gmail.com
  */
-public class SplashScreenReactPackage extends TurboReactPackage {
+public class SplashScreenReactPackage extends BaseReactPackage {
 
     @NonNull
     @Override
@@ -35,7 +35,6 @@ public class SplashScreenReactPackage extends TurboReactPackage {
                             SplashScreenModule.NAME,
                             false, // canOverrideExistingModule
                             false, // needsEagerInit
-                            false, // hasConstants
                             false, // isCxxModule
                             isTurboModule // isTurboModule
                     ));
