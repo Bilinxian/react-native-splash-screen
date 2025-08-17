@@ -1,6 +1,5 @@
 package org.devio.rn.splashscreen;
 
-import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 
 /**
@@ -12,13 +11,15 @@ import com.facebook.react.bridge.ReactApplicationContext;
  * Email:crazycodeboy@gmail.com
  */
 public class SplashScreenModule extends NativeSplashScreenSpec {
+    private final ReactApplicationContext reactApplicationContext;
+
     public SplashScreenModule(ReactApplicationContext reactContext) {
         super(reactContext);
+        this.reactApplicationContext = reactContext;
     }
 
     @Override
-    public void hide(Promise promise) {
-        SplashScreen.hide(getCurrentActivity());
-        promise.resolve(true);
+    public void hide() {
+        SplashScreen.hide(reactApplicationContext.getCurrentActivity());
     }
 }

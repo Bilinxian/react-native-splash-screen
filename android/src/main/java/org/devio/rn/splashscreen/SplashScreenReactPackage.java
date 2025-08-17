@@ -22,6 +22,7 @@ import java.util.Map;
  */
 public class SplashScreenReactPackage extends TurboReactPackage {
 
+    @NonNull
     @Override
     public ReactModuleInfoProvider getReactModuleInfoProvider() {
         return () -> {
@@ -34,7 +35,7 @@ public class SplashScreenReactPackage extends TurboReactPackage {
                             SplashScreenModule.NAME,
                             false, // canOverrideExistingModule
                             false, // needsEagerInit
-                            true, // hasConstants
+                            false, // hasConstants
                             false, // isCxxModule
                             isTurboModule // isTurboModule
                     ));

@@ -24,7 +24,7 @@ public class SplashScreen {
      */
     public static void show(final Activity activity, final int themeResId, final boolean fullScreen) {
         if (activity == null) return;
-        mActivity = new WeakReference<Activity>(activity);
+        mActivity = new WeakReference<>(activity);
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
